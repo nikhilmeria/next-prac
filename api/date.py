@@ -12,5 +12,5 @@ class handler(BaseHTTPRequestHandler):
         nse = Nse()
         # q = nse.get_quote('infy')
         self.wfile.write(
-            str(nse.active_equity_monthly_url).encode())
+            str(nse.is_valid_code('infy')).encode())
         return
