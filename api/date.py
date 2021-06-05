@@ -10,7 +10,7 @@ class handler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
         nse = Nse()
-        q = nse.get_quote('infy')
+        # q = nse.get_quote('infy')
         self.wfile.write(
-            str(q).encode())
+            str(nse).encode())
         return
