@@ -14,9 +14,9 @@ class handler(BaseHTTPRequestHandler):
         # q = nse.get_quote('infy', as_json=True)
         # data = json.dumps(q)
 
-        res = requests.get("https://jsonplaceholder.typicode.com /todos")
-        data = json.loads(res.text)
+        res = requests.get("https://jsonplaceholder.typicode.com/todos/1")
+        #data = json.loads(res.text)
 
         self.wfile.write(
-            str(data).encode())
+            str(res.status_code).encode())
         return
