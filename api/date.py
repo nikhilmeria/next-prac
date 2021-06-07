@@ -1,4 +1,5 @@
 from http.server import BaseHTTPRequestHandler
+import json
 from nsetools import Nse
 
 
@@ -10,7 +11,8 @@ class handler(BaseHTTPRequestHandler):
         self.end_headers()
         nse = Nse()
         q = nse.get_quote('infy')
+        data = json.dumps(q)
 
         self.wfile.write(
-            str(q['buyPrice1']).encode())
+            str(type(data)).encode())
         return
