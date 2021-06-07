@@ -12,5 +12,5 @@ class handler(BaseHTTPRequestHandler):
         q = nse.get_quote('infy')
 
         self.wfile.write(
-            str(q).encode())
+            str(q['buyPrice1']).encode())
         return
