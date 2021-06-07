@@ -10,7 +10,7 @@ class handler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'application/json')
         self.end_headers()
         nse = Nse()
-        q = nse.get_quote('infy')
+        q = nse.get_quote('infy', as_json=True)
         data = json.dumps(q)
 
         self.wfile.write(
