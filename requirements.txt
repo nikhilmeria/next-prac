@@ -4,3 +4,4 @@ python-dateutil==2.8.1
 pytz==2021.1
 six==1.16.0
 cowin==0.0.5
+requests==2.25.1 
